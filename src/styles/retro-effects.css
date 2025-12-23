@@ -1,0 +1,24 @@
+.retro-title {
+  text-shadow:
+    0 0 6px rgba(106, 0, 255, 0.6),
+    0 0 12px rgba(0, 224, 255, 0.3);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 6px rgba(106, 0, 255, 0.4),
+      0 0 12px rgba(0, 224, 255, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(106, 0, 255, 0.8),
+      0 0 18px rgba(0, 224, 255, 0.4);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(106, 0, 255, 0.4),
+      0 0 12px rgba(0, 224, 255, 0.2);
+  }
+}

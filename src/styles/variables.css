@@ -1,0 +1,15 @@
+:root {
+  --bg-main: #0b0b0f;
+  --bg-secondary: #14141c;
+
+  --text-main: #e6e6eb;
+  --text-muted: #9a9aa6;
+
+  --accent-red: #8b0000;
+  --accent-violet: #6a00ff;
+  --accent-cyan: #00e0ff;
+
+  --glow-red: 0 0 10px rgba(139, 0, 0, 0.6);
+  --glow-violet: 0 0 12px rgba(106, 0, 255, 0.6);
+  --glow-cyan: 0 0 12px rgba(0, 224, 255, 0.6);
+}
