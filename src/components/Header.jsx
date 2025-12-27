@@ -1,10 +1,11 @@
-import './Header.css'
+// src/components/Header.jsx
+import '../styles/Header.css'
 
 function Header() {
   return (
     <header className="header">
-      <h1 className="retro-title">CiberNaka Stream</h1>
-      <p className="header-subtitle">
+      <h1 className="title-glow">CiberNaka Stream</h1>
+      <p className="subtitle">
         Retro gaming · Streams · Descargas
       </p>
     </header>

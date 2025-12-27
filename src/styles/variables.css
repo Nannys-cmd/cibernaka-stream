@@ -1,15 +1,27 @@
+/* src/styles/variables.css */
 :root {
-  --bg-main: #0b0b0f;
-  --bg-secondary: #14141c;
-
-  --text-main: #e6e6eb;
-  --text-muted: #9a9aa6;
-
-  --accent-red: #8b0000;
-  --accent-violet: #6a00ff;
-  --accent-cyan: #00e0ff;
-
-  --glow-red: 0 0 10px rgba(139, 0, 0, 0.6);
-  --glow-violet: 0 0 12px rgba(106, 0, 255, 0.6);
-  --glow-cyan: 0 0 12px rgba(0, 224, 255, 0.6);
+  /* Colores principales */
+  --bg-panel: rgba(0, 0, 0, 0.55);
+  --text-main: #eaeaea;
+  --text-dim: #b0b0b0;
+  --accent: #ff2e63;
+  --accent-hover: #ff4070;
+  
+  /* Bordes y radios */
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  
+  /* Efectos de brillo */
+  --glow-accent:
+    0 0 8px rgba(255, 46, 99, 0.6),
+    0 0 20px rgba(255, 46, 99, 0.4);
+  
+  --glow-accent-intense:
+    0 0 14px rgba(255, 46, 99, 0.9),
+    0 0 30px rgba(255, 46, 99, 0.5);
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s ease;
 }

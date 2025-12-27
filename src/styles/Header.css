@@ -1,0 +1,42 @@
+/* src/styles/Header.css */
+/* Estilos del header */
+
+.header {
+  padding: 2.5rem 1rem 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.title-glow {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--accent);
+  text-shadow: var(--glow-accent);
+  margin: 0;
+  letter-spacing: -0.02em;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-top: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive del header */
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .title-glow {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

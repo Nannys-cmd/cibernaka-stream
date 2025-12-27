@@ -1,24 +1,35 @@
-.retro-title {
-  text-shadow:
-    0 0 6px rgba(106, 0, 255, 0.6),
-    0 0 12px rgba(0, 224, 255, 0.3);
+/* Retro effects styles */
+/* Animaciones y efectos retro */
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    text-shadow: var(--glow-accent); 
+  }
+  50% {
+    text-shadow: var(--glow-accent-intense);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Clases reutilizables */
+.glow-text {
+  text-shadow: var(--glow-accent);
+}
+
+.glow-pulse {
   animation: pulseGlow 3s ease-in-out infinite;
 }
 
-@keyframes pulseGlow {
-  0% {
-    text-shadow:
-      0 0 6px rgba(106, 0, 255, 0.4),
-      0 0 12px rgba(0, 224, 255, 0.2);
-  }
-  50% {
-    text-shadow:
-      0 0 10px rgba(106, 0, 255, 0.8),
-      0 0 18px rgba(0, 224, 255, 0.4);
-  }
-  100% {
-    text-shadow:
-      0 0 6px rgba(106, 0, 255, 0.4),
-      0 0 12px rgba(0, 224, 255, 0.2);
-  }
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
 }
