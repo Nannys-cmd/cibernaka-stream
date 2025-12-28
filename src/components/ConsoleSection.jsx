@@ -1,5 +1,4 @@
 // src/components/ConsoleSection.jsx
-// src/components/ConsoleSection.jsx
 import { useEffect, useState } from 'react'
 import consoles from '../data/consoles'
 
@@ -76,41 +75,65 @@ function ConsoleSection() {
               : null
 
             return (
-              <a 
-                href={game.link} 
-                target="_blank" 
-                rel="noreferrer"
-                className="game-card-thumbnail"
-                key={i}
-              >
-                {thumbnail ? (
-                  <div className="thumbnail-container">
-                    <img 
-                      src={thumbnail} 
-                      alt={game.title}
-                      className="game-thumbnail"
-                    />
-                    <div className="play-overlay">
-                      <svg 
-                        width="48" 
-                        height="48" 
-                        viewBox="0 0 24 24" 
-                        fill="currentColor"
-                      >
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
+              <div className="game-card-wrapper" key={i}>
+                <a 
+                  href={game.link} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="game-card-thumbnail"
+                >
+                  {thumbnail ? (
+                    <div className="thumbnail-container">
+                      <img 
+                        src={thumbnail} 
+                        alt={game.title}
+                        className="game-thumbnail"
+                      />
+                      <div className="play-overlay">
+                        <svg 
+                          width="48" 
+                          height="48" 
+                          viewBox="0 0 24 24" 
+                          fill="currentColor"
+                        >
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
                     </div>
+                  ) : (
+                    <div className="thumbnail-placeholder">
+                      <span>🎮</span>
+                    </div>
+                  )}
+                  <div className="game-info">
+                    <h3 className="game-title">{game.title}</h3>
                   </div>
-                ) : (
-                  <div className="thumbnail-placeholder">
-                    <span>🎮</span>
-                  </div>
-                )}
-                <div className="game-info">
-                  <h3 className="game-title">{game.title}</h3>
-                  <span className="watch-label">Ver Short</span>
+                </a>
+                
+                <div className="game-actions">
+                  <a 
+                    href={game.link} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="action-btn watch-btn"
+                  >
+                    <span className="btn-icon">▶️</span>
+                    <span className="btn-text">Ver Short</span>
+                  </a>
+                  
+                  {game.rom_link && (
+                    <a 
+                      href={game.rom_link} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="action-btn download-btn"
+                    >
+                      <span className="btn-icon">📥</span>
+                      <span className="btn-text">Descargar ROM</span>
+                    </a>
+                  )}
                 </div>
-              </a>
+              </div>
             )
           })}
         </div>
