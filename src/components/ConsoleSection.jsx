@@ -5,11 +5,23 @@ import consoles from '../data/consoles'
 const SHEET_URL =
   'https://opensheet.elk.sh/1-r9y4Cj-H_2xNg8U77IZP4LdZqGvjg_jxSoAcmC80-0/Hoja%201'
 
-// Función para extraer el ID del video de YouTube
+// Función para extraer el ID del video de YouTube (shorts Y videos normales)
 const getYouTubeID = (url) => {
   if (!url) return null
-  const match = url.match(/shorts\/([a-zA-Z0-9_-]+)/)
-  return match ? match[1] : null
+  
+  // Para shorts: youtube.com/shorts/ID
+  let match = url.match(/shorts\/([a-zA-Z0-9_-]+)/)
+  if (match) return match[1]
+  
+  // Para videos normales: youtube.com/watch?v=ID
+  match = url.match(/[?&]v=([a-zA-Z0-9_-]+)/)
+  if (match) return match[1]
+  
+  // Para links cortos: youtu.be/ID
+  match = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/)
+  if (match) return match[1]
+  
+  return null
 }
 
 function ConsoleSection() {
